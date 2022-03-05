@@ -1,3 +1,12 @@
+variable "name" {
+  type        = string
+  description = "Name of the database to create"
+}
+variable "host" {
+  type        = string
+  description = "mySQL server address"
+}
+
 variable "context" {
   type = object({
     organization = string
@@ -6,5 +15,5 @@ variable "context" {
     product      = string
     tags         = map(string)
   })
-  description = "Default context variables"
+  description = "Default environmental context"
 }
